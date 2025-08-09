@@ -2,12 +2,13 @@ import express from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
+import connectDB from './database/dbconnection.js'
 dotenv.config({})
 const app = express()
 const port = process.env.PORT
 
 // database connection
-
+connectDB()
 //middlewares
 app.use(
     cors({
