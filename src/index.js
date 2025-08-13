@@ -22,12 +22,13 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 
-//Routes
+
 app.get("/status",(req,res)=>{
     res.status(200).send({
-        message:"you are live"
+        message:"you are live",
     })
 })
+
 app.use("/api/v1/user",userRoutes)
 
 
