@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 
 
-app.get("/status",(req,res)=>{
+app.get("/api/v1/status",(req,res)=>{
     res.status(200).send({
         message:"you are live",
     })
